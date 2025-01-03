@@ -106,7 +106,7 @@ import nltk
 def getProfessor(expression):
     """Fetch information from a certain professor at Texas Tech"""
     print("Running get professor tool with expression:", expression)
-    if(expression == "None"):
+    if(expression == None):
         return json.dumps({"error": "Invalid expression, please try again, or try different wording"})
     school = rmp.get_school_by_name("Texas Tech University")
 
@@ -221,7 +221,7 @@ allDepartments ={
 def searchDepartment(expression):
 
     print("Running search department tool with expression:", expression)
-    if(expression == "None"):
+    if(expression == None):
         return json.dumps({"error": "Invalid expression, please try again, or try different wording"})
     most_similar_department = allDepartments[1]
     most_similar_distance = nltk.edit_distance(most_similar_department, expression)
